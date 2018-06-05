@@ -2,21 +2,38 @@
   <form fxLayout="column" fxLayoutAlign="center center" #f="ngForm"(ngSubmit)="onSubmit(f)">
 
     <mat-form-field>
-      <input type="text" matInput placeholder="First Name" ngModel name="fname">
+      <input type="text" matInput placeholder="First Name" ngModel name="fname" required>
     </mat-form-field>
     <mat-form-field>
-      <input type="text" matInput placeholder="Last Name" ngModel name="lname">
+      <input type="text" matInput placeholder="Last Name" ngModel name="lname" required>
     </mat-form-field>
     <mat-form-field>
-      <input type="email" matInput placeholder="Email" ngModel name="email">
+      <input 
+      type="email" 
+      matInput 
+      placeholder="Email" 
+      ngModel 
+      name="email" 
+      email 
+      required>
     </mat-form-field>
     <mat-form-field>
-      <input type="password" matInput placeholder="password" ngModel name="password">
+      <input 
+      type="password" 
+      matInput 
+      placeholder="password" 
+      ngModel 
+      name="password" 
+      required
+      minlength="6">
+      <mat-hint>Should be at least 6 Characters long</mat-hint>
     </mat-form-field>
     <mat-form-field>
-      <input type="text" matInput placeholder="Phone" ngModel name="phone">
+      <input type="text" matInput placeholder="Phone" ngModel name="phone" required>
     </mat-form-field>
 
-    <button type="submit" mat-raised-button color="primary">Sign Up</button>
+    <mat-checkbox ngModel name="agree" required >Agree to our Terms and Conditions.</mat-checkbox>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Sign Up</button>
   </form>
 </section>
