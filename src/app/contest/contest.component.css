@@ -1,0 +1,28 @@
+.contest{
+    text-align: center;
+    margin: 16px;
+}
+
+.contest-container{
+    width: 860px;
+}
+.each-container{
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ctst-time{
+    font-size: 48px;
+}
+
+.each-contest-container{
+    width: 100%;
+}
+.each-contest-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(46, 61, 73, 0.16);
+}
